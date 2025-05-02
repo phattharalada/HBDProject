@@ -1,0 +1,191 @@
+body {
+  font-family: "Itim", cursive;
+  font-weight: 400;
+  font-style: normal;
+  text-align: center;
+  margin-top: 50px;
+  background: #ffbef1;
+}
+
+
+input {
+  padding: 8px;
+  margin: 5px;
+}
+
+button {
+  padding: 10px 20px;
+}
+
+button:hover {
+  background: #e95a50;
+}
+.candle {
+  width: auto;
+  height: 120px;
+  position: absolute; /* จัดตำแหน่งแบบอิสระ */
+  top: -50px; /* ปรับตำแหน่งให้อยู่เหนือเค้ก */
+  z-index: 10;
+}
+.candle.left {
+  left: 15%;
+}
+.candle.right {
+  right: 15%;
+}
+.cake-container {
+  position: relative; /* ทำให้ลูกภาพ (เทียน) อ้างอิงตำแหน่งจากเค้ก */
+  width: 400px; /* กำหนดขนาดของเค้ก */
+  margin: 0 auto; /* จัดให้อยู่ตรงกลาง */
+}
+.cake-container img {
+  display: block;
+}
+
+.container {
+  background: #fff0fb;
+  padding: 35px;
+  max-width: 450px;
+  margin: auto;
+  margin-top: 15%;
+  border-radius: 20px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
+}
+
+h1 {
+  color: #e95a50;
+  font-size: 40px;
+}
+h1.input {
+  color: #e95a50;
+  font-size: 30px;
+}
+p {
+  color: #e95a50;
+  font-size: 20px;
+}
+
+
+@media (max-width: 768px) {
+  body {
+    margin-top: 60px;
+    font-size: 14px;
+  }
+
+  .cake-container {
+    position: relative;
+    width: 400px;
+    margin: 0 auto;
+  }
+
+  .candle {
+    height: 100px; /* ลดขนาดเทียน */
+    top: -40px; /* ปรับตำแหน่งเทียน */
+  }
+
+  .candle.left {
+    left: 20%; /* ปรับตำแหน่งเทียนซ้าย */
+  }
+
+  .candle.right {
+    right: 20%; /* ปรับตำแหน่งเทียนขวา */
+  }
+
+  button {
+    padding: 8px 16px; /* ลดขนาดปุ่ม */
+    font-size: 20px;
+  }
+
+  input {
+    padding: 6px;
+    font-size: 14px;
+  }
+  .container {
+    background: #fff0fb;
+    padding: 30px;
+    max-width: 350px;
+    margin: auto;
+    margin-top: 35%;
+    border-radius: 20px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
+  }
+  h1 {
+    color: #e95a50;
+    font-size: 35px;
+  }
+  h1.input {
+    color: #e95a50;
+    font-size: 30px;
+  }
+  p {
+    color: #e95a50;
+    font-size: 20px;
+  }
+}
+
+@media (max-width: 480px) {
+  body {
+    margin-top: 40px;
+    font-size: 13px;
+  }
+
+  .cake-container {
+    position: relative;
+    width: 400px;
+    margin: 0 auto;
+    margin-left: -8%;
+  }
+
+  .candle {
+    height: 100px;
+    top: -35px;
+  }
+
+  .candle.left {
+    left: 20%;
+  }
+
+  .candle.right {
+    right: 20%;
+  }
+
+  button {
+    padding: 6px 14px;
+    font-size: 12px;
+  }
+
+  input {
+    padding: 5px;
+    font-size: 12px;
+  }
+  .container {
+    background: #fff0fb;
+    padding: 30px;
+    max-width: 250px;
+    margin: auto;
+    margin-top: 50%;
+    border-radius: 20px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
+  }
+  h1 {
+    color: #e95a50;
+    font-size: 30px;
+  }
+  h1.input {
+    color: #e95a50;
+    font-size: 25px;
+  }
+  p {
+    color: #e95a50;
+    font-size: 15px;
+  }
+  form {
+    display: flex;
+    flex-direction: column;
+  }
+  form .button {
+    margin-top: 10px;
+    font-size: 15px;
+  }
+  
+}
