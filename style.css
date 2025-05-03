@@ -65,10 +65,10 @@ p {
   font-size: 20px;
 }
 
-
-@media (max-width: 768px) {
+/* สำหรับ Tablet */
+@media (max-width: 1366px) {
   body {
-    margin-top: 60px;
+    margin-top: 300px;
     font-size: 14px;
   }
 
@@ -79,21 +79,22 @@ p {
   }
 
   .candle {
-    height: 100px; /* ลดขนาดเทียน */
-    top: -40px; /* ปรับตำแหน่งเทียน */
+    height: 180px; /* ลดขนาดเทียน */
+    top: -60px; /* ปรับตำแหน่งเทียน */
   }
 
   .candle.left {
-    left: 20%; /* ปรับตำแหน่งเทียนซ้าย */
+    left: -2%; /* ปรับตำแหน่งเทียนซ้าย */
   }
 
   .candle.right {
-    right: 20%; /* ปรับตำแหน่งเทียนขวา */
+    right: -2%; /* ปรับตำแหน่งเทียนขวา */
   }
 
   button {
+    margin-top: 30px;
     padding: 8px 16px; /* ลดขนาดปุ่ม */
-    font-size: 20px;
+    font-size: 25px;
   }
 
   input {
@@ -111,7 +112,7 @@ p {
   }
   h1 {
     color: #e95a50;
-    font-size: 35px;
+    font-size: 60px;
   }
   h1.input {
     color: #e95a50;
@@ -119,13 +120,18 @@ p {
   }
   p {
     color: #e95a50;
-    font-size: 20px;
+    font-size: 35px;
+  }
+  .cake {
+    width: 700px;
+    margin-left: -150px;
   }
 }
 
-@media (max-width: 480px) {
+/* สำหรับ Mobile */
+@media (max-width: 768px) {
   body {
-    margin-top: 40px;
+    margin-top: 150px;
     font-size: 13px;
   }
 
@@ -133,7 +139,6 @@ p {
     position: relative;
     width: 400px;
     margin: 0 auto;
-    margin-left: -8%;
   }
 
   .candle {
@@ -169,11 +174,11 @@ p {
   }
   h1 {
     color: #e95a50;
-    font-size: 30px;
+    font-size: 25px;
   }
   h1.input {
     color: #e95a50;
-    font-size: 25px;
+    font-size: 20px;
   }
   p {
     color: #e95a50;
@@ -187,5 +192,4 @@ p {
     margin-top: 10px;
     font-size: 15px;
   }
-  
 }
