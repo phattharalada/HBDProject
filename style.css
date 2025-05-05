@@ -124,38 +124,39 @@ p {
 }
 
 /* สำหรับ Mobile */
-@media (max-width: 576px) {
+@media (max-width: 360px) {
   body {
-    font-size: 13px;
+    font-size: 12px;
   }
 
   .cake-container {
-    position: relative;
     width: 100%;
-    margin: 0 auto;
-    max-width: 500px;
+    margin-top: 15%;
   }
 
   .cake {
     width: 100%;
-    display: block;
   }
 
   /* เทียนอยู่บนเค้ก */
   .candle-wrapper {
     position: absolute;
-    top: -50px;
+    top: 5%;
     width: 100%;
     display: flex;
     justify-content: space-between;
-    padding: 0 20%; /* ปรับระยะห่างจากขอบเค้ก */
-    z-index: 10;
+    padding: 0%;
   }
 
   .candle {
-    height: 120px;
+    height: 100px;
   }
-
+  .candle.left {
+    left: 15%;
+  }
+  .candle.right {
+    right: 15%;
+  }
   button {
     padding: 6px 14px;
     font-size: 12px;
