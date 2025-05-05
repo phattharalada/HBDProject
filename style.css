@@ -67,25 +67,28 @@ p {
   .cake-container {
     position: relative;
     margin: 0 auto;
-    margin-top: 5%;
+    width: 100%;
+    max-width: 500px;
   }
 
   .cake {
-    width: 450px;
-    margin-left: -7%;
+    width: 100%; /* responsive */
+    display: block;
+  }
+
+  /* เทียนอยู่บนเค้ก */
+  .candle-wrapper {
+    position: absolute;
+    top: -50px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    padding: 0 20%; /* ปรับระยะห่างจากขอบเค้ก */
+    z-index: 10;
   }
 
   .candle {
     height: 120px; /* ลดขนาดเทียน */
-    top: -45px; /* ปรับตำแหน่งเทียน */
-  }
-
-  .candle.left {
-    left: 13%; /* ปรับตำแหน่งเทียนซ้าย */
-  }
-
-  .candle.right {
-    right: 13%; /* ปรับตำแหน่งเทียนขวา */
   }
 
   button {
@@ -128,27 +131,29 @@ p {
 
   .cake-container {
     position: relative;
-    width: 400px;
+    width: 100%;
     margin: 0 auto;
-    margin-top: 10%;
+    max-width: 500px;
   }
 
   .cake {
-    width: 500px;
-    margin-left: -12%;
+    width: 100%;
+    display: block;
+  }
+
+  /* เทียนอยู่บนเค้ก */
+  .candle-wrapper {
+    position: absolute;
+    top: -50px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    padding: 0 20%; /* ปรับระยะห่างจากขอบเค้ก */
+    z-index: 10;
   }
 
   .candle {
     height: 120px;
-    top: -35px;
-  }
-
-  .candle.left {
-    left: 15%;
-  }
-
-  .candle.right {
-    right: 15%;
   }
 
   button {
