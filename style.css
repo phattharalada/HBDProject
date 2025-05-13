@@ -4,38 +4,64 @@ body {
   font-style: normal;
   text-align: center;
   background: #ffbef1;
+  margin: 0;
+  padding: 0;
 }
+
 input {
   padding: 8px;
   margin: 5px;
 }
+
 button {
   padding: 10px 20px;
 }
+
 button:hover {
   background: #e95a50;
 }
-.candle {
-  width: auto;
-  height: 130px;
-  position: absolute; /* จัดตำแหน่งแบบอิสระ */
-  top: -50px; /* ปรับตำแหน่งให้อยู่เหนือเค้ก */
-  z-index: 10;
-}
-.candle.left {
-  left: 38%;
-}
-.candle.right {
-  right: 38%;
-}
+
 .cake-container {
-  position: relative; /* ทำให้ลูกภาพ (เทียน) อ้างอิงตำแหน่งจากเค้ก */
-  margin: 0 auto; /* จัดให้อยู่ตรงกลาง */
-}
-.cake {
-  width: 500px; /* ขนาดเค้ก */
+  position: relative;
+  width: 100%;
+  max-width: 500px;
+  margin: 0 auto;
 }
 
+.cake {
+  width: 100%;
+  display: block;
+}
+
+.candle-wrapper {
+  position: absolute;
+  top: 5px;
+  width: 100%;
+  display: flex;
+  justify-content: center; /* เทียนซ้าย-ขวาเท่ากัน */
+  pointer-events: none;
+  z-index: 10;
+}
+
+.candle {
+  height: 130px;
+  width: auto;
+}
+.candle.left {
+  position: absolute;
+  top: -50px;
+  left: 45%;
+  transform: translateX(-60%);
+  z-index: 2;
+}
+
+.candle.right {
+  position: absolute;
+  top: -50px;
+  left: 35%;
+  transform: translateX(5%);
+  z-index: 1;
+}
 .container {
   background: #fff0fb;
   padding: 35px;
@@ -45,54 +71,44 @@ button:hover {
   border-radius: 20px;
   box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
 }
+
 h1 {
   color: #e95a50;
   font-size: 40px;
 }
+
 h1.input {
   color: #e95a50;
   font-size: 30px;
 }
+
 p {
   color: #e95a50;
   font-size: 20px;
 }
 
-/* สำหรับ Tablet */
+/* Tablet */
 @media (max-width: 768px) {
   body {
     font-size: 14px;
   }
 
-  .cake-container {
-    position: relative;
-    margin: 0 auto;
-    width: 100%;
-    max-width: 500px;
-  }
-
-  .cake {
-    width: 100%; /* responsive */
-    display: block;
-  }
-
-  /* เทียนอยู่บนเค้ก */
-  .candle-wrapper {
-    position: absolute;
-    top: -50px;
-    width: 100%;
-    display: flex;
-    justify-content: space-between;
-    padding: 0 20%; /* ปรับระยะห่างจากขอบเค้ก */
-    z-index: 10;
-  }
-
   .candle {
-    height: 120px; /* ลดขนาดเทียน */
+    height: 120px;
+  }
+
+  .candle-wrapper {
+  position: absolute;
+  top: 15px;
+  width: 100%;
+  display: flex;
+  justify-content: center; /* เทียนซ้าย-ขวาเท่ากัน */
+  pointer-events: none;
+  z-index: 10;
   }
 
   button {
-    padding: 8px 16px; /* ลดขนาดปุ่ม */
+    padding: 8px 16px;
     font-size: 15px;
   }
 
@@ -100,99 +116,117 @@ p {
     padding: 6px;
     font-size: 14px;
   }
-  .container {
-    background: #fff0fb;
-    padding: 30px;
-    max-width: 450px;
-    margin: auto;
-    margin-top: 25%;
-    border-radius: 20px;
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
-  }
+
   h1 {
-    color: #e95a50;
-    font-size: 45px;
+    font-size: 35px;
   }
-  h1.input {
-    color: #e95a50;
-    font-size: 30px;
-  }
+
   p {
-    color: #e95a50;
-    font-size: 20px;
+    font-size: 18px;
   }
 }
 
-/* สำหรับ Mobile */
-@media (max-width: 360px) {
+/* Mobile */
+@media (max-width: 576px) {
   body {
-    font-size: 12px;
-  }
-
-  .cake-container {
-    width: 100%;
-    margin-top: 15%;
-  }
-
-  .cake {
-    width: 100%;
-  }
-
-  /* เทียนอยู่บนเค้ก */
-  .candle-wrapper {
-    position: absolute;
-    top: 5%;
-    width: 100%;
-    display: flex;
-    justify-content: space-between;
-    padding: 0%;
+    font-size: 13px;
   }
 
   .candle {
-    height: 100px;
-  }
-  .candle.left {
-    left: 15%;
-  }
-  .candle.right {
-    right: 15%;
-  }
-  button {
-    padding: 6px 14px;
-    font-size: 12px;
+    height: 120px;
   }
 
-  input {
-    padding: 12px;
-    font-size: 12px;
+  .candle-wrapper {
+    position: absolute;
+    top: 15px;
+    width: 100%;
+    display: flex;
+    justify-content: center; /* เทียนซ้าย-ขวาเท่ากัน */
+    pointer-events: none;
+    z-index: 10;
   }
+
   .container {
-    background: #fff0fb;
-    padding: 30px;
     max-width: 350px;
-    margin: auto;
-    margin-top: 35%;
-    border-radius: 20px;
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
+    margin-top: 30%;
   }
+
   h1 {
-    color: #e95a50;
-    font-size: 35px;
-  }
-  h1.input {
-    color: #e95a50;
     font-size: 30px;
   }
+
   p {
-    color: #e95a50;
     font-size: 15px;
   }
+
   form {
     display: flex;
     flex-direction: column;
   }
+
   form .button {
     margin-top: 10px;
     font-size: 15px;
+  }
+}
+
+@media (max-width: 460px) {
+  .candle {
+    height: 115px;
+  }
+
+  .candle-wrapper {
+    position: absolute;
+    top: 10px;
+    width: 100%;
+    display: flex;
+    justify-content: center; /* เทียนซ้าย-ขวาเท่ากัน */
+    pointer-events: none;
+    z-index: 10;
+  }
+
+  .container {
+    margin-top: 35%;
+  }
+}
+
+@media (max-width: 410px) {
+  .candle {
+    height: 110px;
+  }
+
+  .candle-wrapper {
+    position: absolute;
+    top: 10px;
+    width: 100%;
+    display: flex;
+    justify-content: center; /* เทียนซ้าย-ขวาเท่ากัน */
+    pointer-events: none;
+    z-index: 10;
+  }
+
+  .container {
+    margin-top: 35%;
+  }
+}
+
+/* Extra Small Mobile */
+@media (max-width: 360px) {
+  .candle {
+    height: 95px;
+  }
+
+  .candle-wrapper {
+    position: absolute;
+    top: 10px;
+    width: 100%;
+    display: flex;
+    justify-content: center; /* เทียนซ้าย-ขวาเท่ากัน */
+    pointer-events: none;
+    z-index: 10;
+  }
+
+  .container {
+    margin-top: 35%;
   }
 }
