@@ -4,12 +4,21 @@ const name = params.get("name") || "คุณ";
 const age = params.get("age") || "0";
 
 document.getElementById("greeting").textContent = `Happy Birthday ${name}!`;
+document.getElementById("wish").textContent = `ขอให้ ${name} มีความสุขมากๆ ในวันเกิดครบรอบ ${age} ปีนะ!`;
 
 // เพิ่ม event listener สำหรับปุ่มย้อนกลับ
 document
   .querySelector("button[type='submit']")
   .addEventListener("click", function () {
     window.location.href = "index.html";
+  });
+
+document
+  .querySelector("button[type='yeah']")
+  .addEventListener("click", function () {
+    const basePath = "./pic";
+    document.getElementById("candle1").src = `${basePath}/C_O${digit1}.png`;
+    document.getElementById("candle2").src = `${basePath}/C_O${digit2}.png`;
   });
 
 // แยกตัวเลขอายุเป็นหลักสิบและหลักหน่วย
